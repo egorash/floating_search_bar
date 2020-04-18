@@ -9,6 +9,7 @@ class FloatingSearchBar extends StatelessWidget {
     this.drawer,
     this.trailing,
     this.leading,
+    this.backgroundColor,
     this.endDrawer,
     this.controller,
     this.onChanged,
@@ -28,6 +29,7 @@ class FloatingSearchBar extends StatelessWidget {
     this.endDrawer,
     this.trailing,
     this.leading,
+    this.backgroundColor,
     this.controller,
     this.onChanged,
     this.title,
@@ -47,6 +49,8 @@ class FloatingSearchBar extends StatelessWidget {
   final SliverChildDelegate _childDelagate;
 
   final TextEditingController controller;
+  
+  final Color backgroundColor;
 
   final ValueChanged<String> onChanged;
 
@@ -64,6 +68,7 @@ class FloatingSearchBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundColor,
       drawer: drawer,
       endDrawer: endDrawer,
       body: NestedScrollView(
